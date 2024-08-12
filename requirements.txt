@@ -1,0 +1,4 @@
+gunicorn
+django
+django-environ
+psycopg2
