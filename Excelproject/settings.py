@@ -24,12 +24,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory where uploaded files a
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'md@+s*x0avbfjyh7(^5t8600+_&kcoppz7z&woh@a2slk34fc$'
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Use the environment variables in Django settings
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['excelorate.onrender.com']
 
 
 # Application definition
