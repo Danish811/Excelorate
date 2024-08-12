@@ -2,3 +2,4 @@ gunicorn
 django
 django-environ
 psycopg2
+python-dotenv
